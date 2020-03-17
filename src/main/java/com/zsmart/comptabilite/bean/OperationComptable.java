@@ -2,7 +2,7 @@ package com.zsmart.comptabilite.bean;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,9 +25,9 @@ public class OperationComptable implements Serializable {
     @Column(precision = 16, scale = 4)
     private BigDecimal montant;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateOperationComptable;
+    private Date dateOperationComptable;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateSaisie;
+    private Date dateSaisie;
     @ManyToOne
     private Caisse caisse;
     @ManyToOne
@@ -77,19 +77,19 @@ public class OperationComptable implements Serializable {
         this.montant = montant;
     }
 
-    public LocalDateTime getDateOperationComptable() {
+    public Date getDateOperationComptable() {
         return dateOperationComptable;
     }
 
-    public void setDateOperationComptable(LocalDateTime dateOperationComptable) {
+    public void setDateOperationComptable(Date dateOperationComptable) {
         this.dateOperationComptable = dateOperationComptable;
     }
 
-    public LocalDateTime getDateSaisie() {
+    public Date getDateSaisie() {
         return dateSaisie;
     }
 
-    public void setDateSaisie(LocalDateTime dateSaisie) {
+    public void setDateSaisie(Date dateSaisie) {
         this.dateSaisie = dateSaisie;
     }
 
