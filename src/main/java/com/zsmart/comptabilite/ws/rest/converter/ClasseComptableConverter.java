@@ -30,7 +30,7 @@ public class ClasseComptableConverter extends AbstractConverter<ClasseComptable,
             }
 
             if (vo.getNumero() != null) {
-                item.setNumero((vo.getNumero()));
+                item.setNumero(NumberUtil.toInt(vo.getNumero()));
             }
 
             if (ListUtil.isNotEmpty(vo.getSousClasseComptablesVo()) && sousClasseComptables) {

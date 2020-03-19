@@ -38,7 +38,7 @@ public class SousClasseComptableConverter extends AbstractConverter<SousClasseCo
             }
 
             if (vo.getNumero() != null) {
-                item.setNumero((vo.getNumero()));
+                item.setNumero(NumberUtil.toInt(vo.getNumero()));
             }
 
             if (ListUtil.isNotEmpty(vo.getCompteComptablesVo()) && compteComptables) {
